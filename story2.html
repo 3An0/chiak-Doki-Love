@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>테스트</title>
+    <meta charset="UTF-8">
+
+    <style>
+      @font-face {
+        font-family: 'DOSGothic';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body{
+        font-family: 'DOSGothic';
+      }
+
+      .blur{
+        position : fixed;
+        top : 0;
+        right : 0;
+        left : 0;
+        bottom : 0;
+        background-color : rgba(0,0,0, 0.7);
+        z-index : 2;
+      }
+
+      .namebox{
+        z-index:3;
+        position : fixed;
+        top: 70%;
+        bottom : 25%;
+        left : 2%;
+        right : 70%;
+        padding-top : 2%;
+
+        background: #f26b80;
+        opacity: 0.9;
+
+        font-size : 300%;
+        text-align : center;
+
+      }
+
+      .talkbox{
+        z-index:2;
+
+        position: fixed;
+
+        top : 75%;
+        bottom: 0;
+        left : 0;
+        right: 0;
+
+        background: pink;
+        opacity: 0.8;    /*투명도*/
+
+        overflow : scroll;
+
+        font-size : 350%;
+        text-align : center;
+        padding : 100px 0;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      .people{
+        position : fixed;
+        z-index:2;
+        bottom : 25%;
+        width : 80%;
+      }
+
+      .background{
+        position: absolute;
+        z-index: 1;
+        width : 100%;
+        top:0;
+      }
+
+
+    </style>
+  </head>
+
+
+    <body style ="display:flex; justify-content : center;">
+
+    <div id ="blur" class="blur"></div>
+
+    <img id="people" src="image_liquid/nothing.png" class="people"></img>
+
+    <img id="backpicter" src="screen_image/18_alleyway1.jpg" class="background"></img>
+
+    <div id = "nameName" class="namebox"></div>
+    <div id = "talks" class="talkbox" onclick = "toggleImg();"></div>
+
+  </body>
+  <script src="talkLog4.js"></script>
+
+</html>

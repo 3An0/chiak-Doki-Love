@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>테스트</title>
+    <meta charset="UTF-8">
+
+    <style>
+    @font-face {
+      font-family: 'DOSGothic';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body{
+      font-family: 'DOSGothic';
+    }
+      h1{
+        padding-right : 10%;
+        padding-left : 10%;
+        padding-top : 50%;
+        font-size : 400%;
+        z-index : 4;
+        color : white;
+      }
+
+
+      button{
+        z-index : 4;
+        vertical-align:middle;
+
+        position : fixed;
+
+        padding:10%;
+        margin:10px;
+        background-color : #f7539c;
+        color:white;
+        border-radius: 30px;
+        font-size: 500%;
+
+        bottom : 3%;
+      }
+
+      button:active{
+        background-color : #be2271;
+      }
+
+
+
+      .darkSoul{
+        z-index:3;
+        position : fixed;
+        top: 0;
+        bottom : 25%;
+        left : 0;
+        right : 0;
+
+        background : black;
+        opacity : 0.7;
+      }
+
+      .namebox{
+        z-index:3;
+        position : fixed;
+        top: 70%;
+        bottom : 25%;
+        left : 2%;
+        right : 70%;
+        padding-top : 2%;
+
+        background: #f26b80;
+        opacity: 0.9;
+
+        font-size : 350%;
+        text-align : center;
+      }
+
+      .talkbox{
+        z-index:2;
+
+        position: fixed;
+
+        top : 75%;
+        bottom: 0;
+        left : 0;
+        right: 0;
+
+        background: pink;
+        opacity: 0.8;    /*투명도*/
+
+        overflow : scroll;
+
+        font-size : 400%;
+        text-align : center;
+        padding : 100px 0;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+
+      .people{
+        position : fixed;
+        z-index:2;
+        bottom : 25%;
+        width : 90%;
+      }
+
+      .background{
+        position: absolute;
+        z-index: 1;
+        width : 100%;
+        top:0;
+      }
+
+    </style>
+  </head>
+
+
+    <body style ="display:flex; justify-content: center;">
+
+    <h1 id = "quest~" > </h1>
+    <button id ="trueButton" style="left: 10%; padding-left: 15%; padding-right : 15%;" onclick="result('t');">O</button>
+    <button id = "falseButton" style="right: 10%; padding-right: 15%; padding-left : 15%;" onclick="result('f');">X</button>
+
+    <div class = "darkSoul"  ></div>
+    <img id="v1" src="image_liquid/nothing.png" class="people"></img>
+
+    <img src="screen_image/11_secretForest2.jpg" class="background"></img>
+
+    <div id = "nameName" class="namebox"></div>
+    <div id = "talks" class="talkbox" onclick = "quests()"></div>
+
+  </body>
+  <script src="quest_3-1.js"></script>
+
+</html>
